@@ -20,7 +20,7 @@ RUN \
 
 COPY src ./src
 COPY public ./public
-COPY next.config.js .
+COPY next.config.mjs .
 COPY jsconfig.json .
 
 # Environment variables must be present at build time
@@ -68,7 +68,7 @@ ARG NEXT_PUBLIC_ENV_VARIABLE
 ENV NEXT_PUBLIC_ENV_VARIABLE=${NEXT_PUBLIC_ENV_VARIABLE}
 
 # Uncomment the following line to disable telemetry at run time
-ENV NEXT_TELEMETRY_DISABLED 1
+# ENV NEXT_TELEMETRY_DISABLED 1
 
 # Note: Don't expose ports here, Compose will handle that for us
 
